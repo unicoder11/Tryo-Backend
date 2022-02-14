@@ -42,7 +42,7 @@
 | --- | ------- | ------------------- | -------------------------------------------------------------- |
 | 1.  | PATCH   | /topup/topupBalance | Used for topup any virtual number matched on user phone number |
  
-### Tranfer Router
+### Transfer Router
 **Used to all about tranfer feature needed**
 
 | No. | Method | Endpoint             | Information                             |
@@ -57,7 +57,7 @@
 
 | No. | Method | Endpoint             | Information                             |
 | --- | ------ | -------------------- | --------------------------------------- |
-| 1.  | POST   | /deposit/newDeposit  | Used to create new tranfer. ( "status" not required )             |
+| 1.  | POST   | /deposit/newDeposit  | Used to create new tranfer. ( "status" not required , add to total balance only with "status": "confirmed")             |
 | 2.  | GET    | /deposit/search      | Used to search any recipient.           |
 | 3.  |        | /deposit/contactUser | Used to get all contact data.           |
 | 4.  |        | /deposit/details/:id | Used to get details of tranfer history. |
