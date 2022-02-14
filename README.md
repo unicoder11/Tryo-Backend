@@ -57,7 +57,7 @@
 
 | No. | Method | Endpoint             | Information                             |
 | --- | ------ | -------------------- | --------------------------------------- |
-| 1.  | POST   | /deposit/newDeposit  | Used to create new tranfer. ( "status" not required , add to total balance only with "status": "confirmed")             |
+| 1.  | POST   | /deposit/newDeposit  | Used to create new tranfer. ( add to total balance only with "status": "confirmed")             |
 | 2.  | GET    | /deposit/search      | Used to search any recipient.           |
 | 3.  |        | /deposit/contactUser | Used to get all contact data.           |
 | 4.  |        | /deposit/details/:id | Used to get details of tranfer history. |
@@ -73,6 +73,15 @@
 | 2.  | PATCH  | /user/changePassword | Used to change password for user.                          |
 | 3.  |        | /user/changeInfo     | Used to change any info for example name and phone number. |
 | 4.  |        | /user/changePhoto    | Used to change profile picture for user.                   |
+
+### User Withdraw
+**Used for any user feature**
+
+| No. | Method | Endpoint             | Information                                                |
+| --- | ------ | -------------------- | ---------------------------------------------------------- |
+| 1.  | POST   | /withdraw            | Used for get all data user that are logged in whit balance.|
+| 2.  | GET    | /withdraw/:id        | Used for get all data user that are logged                 |
+
 
 ## Models
 
@@ -118,3 +127,43 @@
 }
 ```
 
+**Create Withdraw**
+
+```bash
+{
+  "method" : "pix",
+  "id": 498566,
+  "order_id": "12345678TTT9",
+  "solicitation_date": "2021-08-31 14:42:30",
+  "user_id": "User ID",
+  "user_name": "User name",
+  "user_document": "User document",
+  "bank_name": null,
+  "agency": null,
+  "type_operation": null,
+  "account": null,
+  "amount_solicitation": "1.54",
+  "currency": null,
+  "status": "pending"
+}
+```
+**Get Withdraw**
+
+```bash
+{
+  "order_id": "TESTET15153561",
+  "solicitation_date_clear": "2021-08-30 16:02:48",
+  "solicitation_date": "30/08/2021 16:02:48",
+  "code_identify": null,
+  "amount_solicitation": "1.66",
+  "code_bank": "218",
+  "bank_name": "---",
+  "holder": "User name",
+  "agency": "---",
+  "type_account": "---",
+  "account": "---",
+  "document": "User document",
+  "status": "canceled"
+}
+```
+  
